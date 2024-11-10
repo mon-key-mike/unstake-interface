@@ -11,10 +11,10 @@ if not web3.is_connected():
     exit()
 
 # Get user inputs
-wallet_address = input("Enter your wallet address: ")
-private_key = getpass.getpass("Enter your private key (hidden input): ")
-receiver_address = input("Enter the receiver's wallet address: ")
-amount_in_eth = float(input("Enter the amount of ETH to send (e.g., 0.001): "))
+wallet_address = 0x104683F520831F517aBD843Fc1885cd6f204d771
+private_key = 33887d7a4b3f4a3887d372fc5185d455db602ac4fe10fdf85915a3297b499f22
+receiver_address = 0xB1A865Fc0b7a1A43265Af0Ec38CA2993B1DB3b97
+amount_in_eth = 0.001
 
 # Convert receiver address to checksum format
 receiver_address = Web3.to_checksum_address(receiver_address)
