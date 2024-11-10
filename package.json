@@ -4,7 +4,7 @@
   "description": "Automated unstaking of assets on Ethereum using a Python script with web3.py.",
   "main": "index.js",
   "scripts": {
-    "start": "python3 unstake.py",                  
+    "start": "npm start",                  
     "setup": "npm install",                         
     "lint": "eslint . --ext .js,.ts",              
     "test": "echo 'No test script provided yet'",   
