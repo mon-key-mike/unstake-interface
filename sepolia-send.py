@@ -13,14 +13,16 @@ if not web3.is_connected():
 # Get user inputs
 wallet_address = input("Enter your wallet address: ")
 private_key = getpass.getpass("Enter your private key (hidden input): ")
+receiver_address = input("Enter the receiver's wallet address: ")
+amount_in_eth = float(input("Enter the amount of ETH to send (e.g., 0.001): "))
 
-# Amount to send (in ether)
-amount_in_eth = 0.001
+# Convert receiver address to checksum format
+receiver_address = Web3.to_checksum_address(receiver_address)
 
 # Build the transaction
 transaction = {
     'from': wallet_address,
-    'to': wallet_address,  # Sending to self (you can change this to any valid address)
+    'to': receiver_address,
     'value': web3.to_wei(amount_in_eth, 'ether'),
     'gas': 21000,
     'gas_price': web3.eth.gas_price,
