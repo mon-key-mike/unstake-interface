@@ -4,20 +4,20 @@
   "description": "Automated unstaking of assets on Ethereum using a Python script with web3.py.",
   "main": "index.js",
   "scripts": {
-    "start": "python3 unstake.py",                  // Runs the main Python script.
-    "setup": "npm install",                         // Installs all dependencies.
-    "lint": "eslint . --ext .js,.ts",               // Lints the JavaScript code.
-    "test": "echo 'No test script provided yet'",   // Placeholder for future test script.
-    "postinstall": "pip install -r requirements.txt" // Ensures Python dependencies are installed post npm install.
+    "start": "python3 unstake.py",                  
+    "setup": "npm install",                         
+    "lint": "eslint . --ext .js,.ts",              
+    "test": "echo 'No test script provided yet'",   
+    "postinstall": "pip install -r requirements.txt" 
   },
   "dependencies": {
-    "dotenv": "^16.0.0",              // For managing environment variables securely.
-    "web3": "^1.8.0",                 // Web3 library for JavaScript (optional, for interoperability if needed).
-    "nodemon": "^2.0.15"              // Tool for auto-restarting the server on changes (for JavaScript code).
+    "dotenv": "^16.0.0",              
+    "web3": "^1.8.0",                 
+    "nodemon": "^2.0.15"              
   },
   "devDependencies": {
-    "eslint": "^8.5.0",               // Linter for maintaining code quality.
-    "eslint-config-airbnb": "^19.0.4", // Airbnb's ESLint config for standard style guide.
+    "eslint": "^8.5.0",             
+    "eslint-config-airbnb": "^19.0.4", 
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.30.0",
