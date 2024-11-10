@@ -20,13 +20,13 @@ amount_in_eth = 0.001
 
 # Build the transaction
 {[
-'from': "wallet_address",
-'to': "receiver_address",
-'value': web3.to_wei(amount_in_eth, 'ether'),
-'gas': 21000,
-'gas_price': web3.eth.gas_price,
-'nonce': web3.eth.get_transaction_count(wallet_address),
-'chainId': 11155111
+'from'= "wallet_address",
+'to'= "receiver_address",
+'value'= web3.to_wei(amount_in_eth, 'ether'),
+'gas'= 21000,
+'gas_price'= web3.eth.gas_price,
+'nonce'= web3.eth.get_transaction_count(wallet_address),
+'chainId'= 11155111
  ]}
 
 # Sign the transaction
