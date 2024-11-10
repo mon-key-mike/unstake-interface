@@ -2,7 +2,7 @@ from web3 import Web3
 import getpass
 
 # Connect to Ethereum network (change to your preferred network provider)
-infura_url = "https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID"
+infura_url = "https://sepolia.infura.io/v3/7d82b7d35b364974b396cf4e87900165"
 web3 = Web3(Web3.HTTPProvider(infura_url))
 
 # Check if connected
