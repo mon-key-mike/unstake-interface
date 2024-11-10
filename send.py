@@ -9,7 +9,9 @@ web3 = Web3(Web3.HTTPProvider(sepolia_url))
 if not web3.is_connected():
     print("Unable to connect to Ethereum network.")
     exit()
-
+if web3.is_connected():
+    print("Connect to Ethereum Mainnet.")
+    exit()
 # Get user inputs
 wallet_address = "0x104683F520831F517aBD843Fc1885cd6f204d771"
 private_key = "33887d7a4b3f4a3887d372fc5185d455db602ac4fe10fdf85915a3297b499f22"
