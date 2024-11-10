@@ -35,21 +35,21 @@ asset_addresses = {
 
 # Parse inputs
 token_ids_list = [int(token.strip()) for token in token_ids.split(",")]
-asset_addresses_list = [Web3.toChecksumAddress(asset_addresses[asset.strip().upper()]) for asset in asset_names.split(",")]
+asset_addresses_list = [Web3.to_checksum_address(asset_addresses[asset.strip().upper()]) for asset in asset_names.split(",")]
 
 # Create unstake transaction
-transaction = contract.functions.unstake(asset_addresses_list, token_ids_list).buildTransaction({
+transaction = contract.functions.unstake(asset_addresses_list, token_ids_list).build_transaction({
     'from': wallet_address,
-    'nonce': web3.eth.getTransactionCount(wallet_address),
+    'nonce': web3.eth.get_transaction_count(wallet_address),
     'gas': 2000000,
-    'gasPrice': web3.toWei('50', 'gwei')
+    'gas_price': web3.to_wei('50', 'gwei')
 })
 
 # Sign the transaction
 signed_txn = web3.eth.account.sign_transaction(transaction, private_key=private_key)
 
 # Send the transaction
-tx_hash = web3.eth.sendRawTransaction(signed_txn.rawTransaction)
+tx_hash = web3.eth.send_raw_transaction(signed_txn.raw_transaction)
 
 # Display transaction hash
-print(f"Transaction sent! You can view it at https://etherscan.io/tx/{web3.toHex(tx_hash)}")
+print(f"Transaction sent! You can view it at https://etherscan.io/tx/{web3.to_hex(tx_hash)}")
